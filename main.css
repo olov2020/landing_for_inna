@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @font-face {
+        font-family: 'ClassRoomCursiveSwash'; /*a name to be used later*/
+        src: url('https://fonts-online.ru/fonts/classroomcursiveswash'); /*URL to font*/
+    }
+}
+
+a {
+    text-decoration: none;
+
+    > * {
+        &:hover {
+            color: #dc5a5a !important;
+            cursor: pointer;
+        }
+    }
+}
+
+p {
+    font-size: 2rem;
+}
+
+h1 {
+    transition: .5s;
+    animation: 1s appear;
+    font-size: 5em;
+    text-align: center;
+}
+
+@keyframes appear {
+    from {
+        translate: 0 -100px;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
+
+main {
+    color: #d6792f;
+    background: rgba(71, 154, 223, 0.36);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    gap: 2rem 0;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside {
+    width: 30%;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}

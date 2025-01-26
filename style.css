@@ -1,92 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    @font-face {
-        font-family: 'ClassRoomCursiveSwash'; /*a name to be used later*/
-        src: url('https://fonts-online.ru/fonts/classroomcursiveswash'); /*URL to font*/
+
+
+.home__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 5rem;
+}
+
+.fromLeft {
+    transition: .5s;
+    animation: 1s side-from-left;
+}
+
+@keyframes side-from-left {
+    from {
+        translate: -1000px 0;
+        scale: 200% 1;
     }
-}
 
-a {
-    text-decoration: none;
-
-    > * {
-        &:hover {
-            color: #dc5a5a !important;
-            cursor: pointer;
-        }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
     }
-}
-
-.header {
-    position: sticky;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    height: 5rem;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-
-    background: linear-gradient(to bottom, white 10%, transparent 100%);
-}
-
-.navigation {
-    display: flex;
-
-    > a {
-        color: #479adf;
-
-        > div {
-            padding: 1rem;
-            background: linear-gradient(to bottom, transparent 50%, #479adf 50%);
-            background-size: 100% 200%;
-            transition: background 1s;
-
-            &:hover {
-                background-position: 100% 100%;
-                color: #dc5a5a;
-            }
-        }
-    }
-}
-
-
-.home {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-}
-
-
-main {
-    color: white;
-    background: rgba(71, 154, 223, 0.13);
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vw;
-    border: 1px solid black;
-}
-
-aside {
-    width: 40%;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-img {
-    width: auto;
-    object-fit: cover;
 }
